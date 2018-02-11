@@ -49,7 +49,7 @@ type UrxvtAPI = typeof escape_sequences
 
 const xresources: UrxvtAPI = {
   foreground: (hex: string) => `*foreground: ${hex}`,
-  background: (alpha: string, hex: string) => `*background: [${alpha}]${hex}`,
+  background: (alpha: string, hex: string) => `*background: ${hex}\nurxvt.background: [${alpha}]${hex}`,
   cursorColor: (hex: string) => `*cursorColor: ${hex}`,
   borderColor: (hex: string) => `*borderColor: ${hex}`,
   color: (i: number, hex: string) => `*color${i}: ${hex}`,
